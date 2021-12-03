@@ -42,7 +42,7 @@ jobs:
           file: ./Dockerfile
           builder: ${{ steps.buildx.outputs.name }}
           push: true
-          tags: ghcr.io/8296301043/my-first-repo:v1
+          tags: ghcr.io/${{ github.repository_owner }}/first-dockerimage:v1
           cache-from: type=local,src=/tmp/.buildx-cache
           cache-to: type=local,dest=/tmp/.buildx-cache
       -
